@@ -1,10 +1,11 @@
-import React from 'react'
+import { MaritimeLetterFlags } from 'maritime-letter-flags';
+import 'maritime-letter-flags/dist/index.css';
+import React from 'react';
 
-import { ExampleComponent } from 'maritime-letter-flags'
-import 'maritime-letter-flags/dist/index.css'
 
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+const App = () => <MaritimeLetterFlags
+    letters={true}
+    text={'Hello, world!'}
+/>;
 
-export default App
+export default App;
