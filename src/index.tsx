@@ -73,8 +73,8 @@ export const MaritimeLetterFlags: React.FC<{
     .replaceAll(/\s+/g, ' ')
     .replaceAll(/[^A-Z ]/g, '')
     .split('')
-    .map(letter =>  
-      <div data-letter={letter} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+    .map((letter, index) =>  
+      <div data-letter={letter} key={index} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         {flags.has(letter) ? <React.Fragment>
           <img src={flags.get(letter)} alt={letter} title={letter} style={{width: '1.1rem'}}/>
           {letters ? <span style={{fontWeight: 'bold'}}>{letter}</span> : ''}
